@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @var $block View
+ */
+
+use Magento\Catalog\Block\Product\View;
+
+$product = $block->getProduct();
+
+if (!$product->hasData('jimmycustomattribute')) {
+    return;
+}
+
+echo $product->getDataByKey('jimmycustomattribute');

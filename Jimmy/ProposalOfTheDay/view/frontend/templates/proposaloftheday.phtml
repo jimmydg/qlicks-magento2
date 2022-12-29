@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @var $block Jimmy\ProposalOfTheDay\Block\ProposalOfTheDay
+ */
+
+if (!$block->showProposal()) {
+    return;
+}
+
+?>
+<div>
+    <?= $block->showProposal() ?>
+</div>

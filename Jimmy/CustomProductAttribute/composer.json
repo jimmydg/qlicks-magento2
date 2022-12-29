@@ -1,0 +1,22 @@
+{
+    "name": "jimmy/customproductattribute",
+    "description": "Custom HTML product attribute",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Jimmy de Graaf",
+            "email": "degraafjimmy@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Jimmy\\CustomProductAttribute\\": ""
+        }
+    }
+}

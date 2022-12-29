@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="proposaloftheday">
+            <label>Proposal of the day</label>
+        </tab>
+        <section
+            id="proposaloftheday"
+            showInWebsite="1"
+            showInStore="1"
+            showInDefault="1"
+        >
+            <label>Proposal SKU</label>
+            <tab>proposaloftheday</tab>
+            <resource>Jimmy_ProposalOfTheDay::config_jimmy_proposaloftheday</resource>
+            <group
+                id="proposaloftheday"
+                showInWebsite="1"
+                showInStore="1"
+                showInDefault="1"
+            >
+                <label>Proposal SKU to display in header and footer</label>
+                <field
+                    id="proposal_sku"
+                    type="text"
+                    showInWebsite="1"
+                    showInStore="1"
+                    showInDefault="1"
+                >
+                    <label>SKU</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

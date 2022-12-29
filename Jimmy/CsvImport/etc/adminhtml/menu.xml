@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+            id="Jimmy::top_level"
+            title="Csv import"
+            module="Jimmy_CsvImport"
+            resource="Magento_Backend::content"
+            sortOrder="999"
+        />
+        <add
+            id="Jimmy_CsvImport::import_index"
+            title="Upload CSV"
+            module="Jimmy_CsvImport"
+            resource="Jimmy_CsvImport::import_index"
+            parent="Jimmy::top_level"
+            action="index/import/index"
+        />
+    </menu>
+</config>

@@ -1,0 +1,56 @@
+<?php
+/**
+ * @var $block Index
+ */
+
+use Jimmy\CsvImport\Block\Adminhtml\Import\Index;
+
+?>
+
+<form
+    action="<?= /* @escapeNotVerified */
+    $block->getUrl('upload/import/upload') ?>"
+    method="post"
+    enctype="multipart/form-data">
+    <?= $block->getBlockHtml('formkey') ?>
+    <fieldset class="admin__fieldset admin__fieldset-import-service">
+        <div class="fieldset admin__field">
+            <label for="import_csv_file" class="admin__field-label">
+                <span>
+                    <?= /* @escapeNotVerified */
+                    __('Import CSV File') ?>
+                </span>
+            </label>
+            <div class="admin__field-control">
+                <input type="file" id="import_csv_file" name="import_csv_file" class="input-file required-entry"/>
+                <button
+                    title="<?= /* @escapeNotVerified */
+                    __('Import CSV File') ?>"
+                    type="button"
+                    class="action-default scalable import-submit"
+                    data-ui-id="widget-button-0">
+                    <span>
+                        <?= /* @escapeNotVerified */
+                        __('Import CSV File') ?>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<script>
+    require(['jquery', "mage/mage", "loadingPopup"], function (jQuery) {
+        jQuery('#import-form').mage('form').mage('validation');
+        (function ($) {
+            $('.import-submit').click(function () {
+                if ($(':input[name="import_csv_file"]').val()) {
+                    $('body').loadingPopup({
+                        timeout: false
+                    });
+                    $(this.form).submit();
+                }
+            });
+        })(jQuery);
+    });
+</script>

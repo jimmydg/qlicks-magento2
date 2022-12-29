@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="customproductattribute">
+            <label>Custom product attribute</label>
+        </tab>
+        <section
+            id="customproductattributesection"
+            showInWebsite="1"
+            showInStore="1"
+            showInDefault="1"
+        >
+            <label>Configuration</label>
+            <tab>customproductattribute</tab>
+            <resource>Jimmy_CustomProductAttribute::config_jimmy_customproductattribute</resource>
+            <group
+                id="customproductattributegroup"
+                showInWebsite="1"
+                showInStore="1"
+                showInDefault="1"
+            >
+                <label>Configuration</label>
+                <field
+                    id="show_in_seperate_tab"
+                    type="select"
+                    showInWebsite="1"
+                    showInStore="1"
+                    showInDefault="1"
+                >
+                    <label>Show in tab?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
